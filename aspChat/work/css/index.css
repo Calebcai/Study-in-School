@@ -1,0 +1,47 @@
+.container{
+    width: 450px;
+    height: 600px;
+    border-radius: 10px;
+    background-image: url(../pic/background.jpg);
+    margin: 0 auto;
+    margin-top: 5%;
+}
+.container h1{
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    text-align: center;
+    padding-top: 10%;
+}
+.container img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-top: 10%;
+    box-shadow: -5px 5px 15px #888888;
+}
+.userimg{
+    text-align: center;
+}
+.container form{
+    margin-top: 10%;
+    text-align: center;
+}
+.container input{
+    border-radius: 10px;
+    height: 30px;
+    width: 300px;
+    margin-top: 10%;
+}
+p{
+    text-align: center;
+    color: white;
+}
+#submit{
+    width: 100px;
+    height: 40px;
+}
+#submit{
+    width: 100px;
+    height: 40px;
+}

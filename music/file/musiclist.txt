@@ -1,0 +1,44 @@
+0,音乐,F:\音乐
+1,Adele - Skyfall.mp3,F:\音乐\Adele - Skyfall.mp3
+2,AGA - Wonderful U (Demo).mp3,F:\音乐\AGA - Wonderful U (Demo).mp3
+3,Alan Walker - Faded.mp3,F:\音乐\Alan Walker - Faded.mp3
+4,Dongye - 亲眼看见你.mp3,F:\音乐\Dongye - 亲眼看见你.mp3
+5,Erutan - Always With Me.mp3,F:\音乐\Erutan - Always With Me.mp3
+6,Fitz and The Tantrums - HandClap.mp3,F:\音乐\Fitz and The Tantrums - HandClap.mp3
+7,Kesha - Die Young.mp3,F:\音乐\Kesha - Die Young.mp3
+8,Lamb Music 小羊詩歌 - Jesus, The Name Above All Names 耶穌
+9,Lamb Music 小羊詩歌 - You Made Me 我是祢所造.mp3,F:\音乐\Lamb Music 小羊詩歌 - You Made Me 我是祢所造.mp3
+10,Sehlin 林婉容 - Anointed One 彌賽亞.mp3,F:\音乐\Sehlin 林婉容 - Anointed One 彌賽亞.mp3
+11,Sehlin 林婉容 - Father, Unto You I Cry 父啊
+12,Songs To Your Eyes - The Infinity Paradox.mp3,F:\音乐\Songs To Your Eyes - The Infinity Paradox.mp3
+13,The Karaoke Machine - Big Big World (伴奏).mp3,F:\音乐\The Karaoke Machine - Big Big World (伴奏).mp3
+14,不才 - 参商 (纯歌版).mp3,F:\音乐\不才 - 参商 (纯歌版).mp3
+15,主的爱像 - 一道江河.mp3,F:\音乐\主的爱像 - 一道江河.mp3
+16,你是为爱而生的人.mp3,F:\音乐\你是为爱而生的人.mp3
+17,华语群星 - 主的喜乐是我力量.mp3,F:\音乐\华语群星 - 主的喜乐是我力量.mp3
+19,华语群星 - 最珍贵的角落 我要向高山举目.mp3,F:\音乐\华语群星 - 最珍贵的角落 我要向高山举目.mp3
+20,喜二郎 - 今生跟随主耶稣 (原版伴奏).mp3,F:\音乐\喜二郎 - 今生跟随主耶稣 (原版伴奏).mp3
+21,基恩敬拜 - 亲眼看见祢 (亲眼看见你).mp3,F:\音乐\基恩敬拜 - 亲眼看见祢 (亲眼看见你).mp3
+22,大卫之声音乐事工 - 耶和华喜乐灵 (Live).mp3,F:\音乐\大卫之声音乐事工 - 耶和华喜乐灵 (Live).mp3
+23,康树龙 - 魔鬼中的天使 (醇享版).mp3,F:\音乐\康树龙 - 魔鬼中的天使 (醇享版).mp3
+24,曲锦楠 - 霞光.mp3,F:\音乐\曲锦楠 - 霞光.mp3
+25,生命河灵粮堂 - 你配得.mp3,F:\音乐\生命河灵粮堂 - 你配得.mp3
+26,生命河灵粮堂 - 全然为你.mp3,F:\音乐\生命河灵粮堂 - 全然为你.mp3
+27,生命河灵粮堂 - 只愿得着祢.mp3,F:\音乐\生命河灵粮堂 - 只愿得着祢.mp3
+28,生命河灵粮堂 - 抬起我的头.mp3,F:\音乐\生命河灵粮堂 - 抬起我的头.mp3
+29,生日快乐 - 生日快乐 (演奏版).mp3,F:\音乐\生日快乐 - 生日快乐 (演奏版).mp3
+30,盛晓玫 - 医治的爱.mp3,F:\音乐\盛晓玫 - 医治的爱.mp3
+31,盛晓玫 - 幸福.mp3,F:\音乐\盛晓玫 - 幸福.mp3
+32,约书亚 - 无价至宝.mp3,F:\音乐\约书亚 - 无价至宝.mp3
+33,约书亚乐团 Joshua Band - 全然为你.mp3,F:\音乐\约书亚乐团 Joshua Band - 全然为你.mp3
+34,网络歌手 - 花尽一生来爱你.mp3,F:\音乐\网络歌手 - 花尽一生来爱你.mp3
+35,群星 - The Rain.mp3,F:\音乐\群星 - The Rain.mp3
+36,群星 - 茶香四溢.mp3,F:\音乐\群星 - 茶香四溢.mp3
+37,草蜢 - 失恋阵线联盟.mp3,F:\音乐\草蜢 - 失恋阵线联盟.mp3
+38,讚美之泉 (Stream of Praise) - 得釋放 You Have Set Me Free.mp3,F:\音乐\讚美之泉 (Stream of Praise) - 得釋放 You Have Set Me Free.mp3
+39,讚美之泉 (Stream of Praise) - 震動天地 (Shake the Heaven and Earth).mp3,F:\音乐\讚美之泉 (Stream of Praise) - 震動天地 (Shake the Heaven and Earth).mp3
+40,陈佩廷 - 古韵.mp3,F:\音乐\陈佩廷 - 古韵.mp3
+41,陈佩廷 - 祷告.mp3,F:\音乐\陈佩廷 - 祷告.mp3
+42,零点乐队 - 相信自己.mp3,F:\音乐\零点乐队 - 相信自己.mp3
+43,高至豪 - The Truth That You Leave (钢琴曲).mp3,F:\音乐\高至豪 - The Truth That You Leave (钢琴曲).mp3
+44,조은애 (赵恩爱) - 어른이 되는 중 (成为大人中).mp3,F:\音乐\조은애 (赵恩爱) - 어른이 되는 중 (成为大人中).mp3

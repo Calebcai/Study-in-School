@@ -1,0 +1,6 @@
+loopback接口的子网是255.255.255.255
+
+request request reply ack
+
+主机执行命令--ftp
+ftp+地址

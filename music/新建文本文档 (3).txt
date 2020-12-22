@@ -1,0 +1,307 @@
+package TuixiangZi;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
+import java.awt.geom.*;
+public class test1 {
+ public static void main(String args[]) {
+  GameFrame frame = new GameFrame();
+  frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  frame.show();
+  JOptionPane.showMessageDialog(null,
+    "红色方块代表玩家\n把紫色箱子推到蓝框中过关\n方向键控制方向\n不能返回到上一步");
+ }
+}
+class GameFrame extends JFrame {
+ static int num;
+ public GameFrame() {
+  setSize(400, 400);
+  Container c = getContentPane();
+  GamePanel panel1 = new GamePanel();
+  c.add(panel1);
+ }
+}
+class GamePanel_2 extends JPanel {
+ public GamePanel_2() {
+  this.setBackground(Color.BLACK);
+ }
+}
+class GamePanel extends JPanel implements KeyListener {
+ int width = 400;
+ int height = 400;
+ Box b;
+ Node man;
+ Node box;
+ Node[] target;
+ int d = 1;// 移动的步长
+ int sideX = 25;
+ int sideY = 25;
+ GameFrame frame;
+ ArrayList wallList;
+ // 初始化界面元素
+ public GamePanel() {
+  this.setBackground(Color.WHITE);
+  b = new Box(this, width / sideX, width / sideY);
+  this.man = b.man;
+  this.box = b.box;
+  this.target = b.target;
+  this.wallList = b.wallList;
+  this.setFocusable(true);
+  this.addKeyListener(this);
+ }
+ public void paintComponent(Graphics g) {
+  super.paintComponent(g);
+  Graphics2D g2 = (Graphics2D) g;
+  // 绘制游戏背景,玩家和箱子.
+  g2.setColor(Color.white);
+  g2.fillRect(0, 0, width, height);
+  g2.setColor(Color.RED);
+  draw(g2, man);
+  g2.setColor(Color.MAGENTA);
+  draw(g2, box);
+  draw(g2, b.box1);
+  draw(g2, b.box2);
+  draw(g2, b.box3);
+  // 绘制墙壁
+  g2.setColor(Color.darkGray);
+  for (int i = 0; i < wallList.size(); i++) {
+   Node n = (Node) wallList.get(i);
+   draw(g2, n);
+  }
+  // 绘制目的地.
+  g2.setColor(Color.blue);
+  for (int i = 0; i < target.length; i++) {
+   g2.drawRect(target[i].x * sideX, target[i].y * sideY, sideX - 1,
+     sideY - 1);
+   Ellipse2D e = new Ellipse2D.Double(target[i].x * sideX, target[i].y
+     * sideY, sideX - 1, sideY - 1);
+   g2.draw(e);
+  }
+ }
+ public void keyPressed(KeyEvent e) {
+  int keycode = e.getKeyCode();
+  if (keycode == KeyEvent.VK_UP) {
+   Box.direction = 1;// 要先确定方向再移动
+   b.move(0, -d);
+  } else if (keycode == KeyEvent.VK_RIGHT) {
+   Box.direction = 2;
+   b.move(d, 0);
+  } else if (keycode == KeyEvent.VK_DOWN) {
+   Box.direction = 3;
+   b.move(0, d);
+  } else if (keycode == KeyEvent.VK_LEFT) {
+   Box.direction = 4;
+   b.move(-d, 0);
+  }
+ }
+ public void keyReleased(KeyEvent e) {
+ }
+ public void keyTyped(KeyEvent e) {
+ }
+ public void draw(Graphics2D g, Node n) {
+  g.fillRect(n.x * sideX, n.y * sideY, sideX - 1, sideY - 1);
+ }
+}
+class Node {
+ int x;
+ int y;
+ public Node(int x, int y) {
+  this.x = x;
+  this.y = y;
+ }
+}
+class Box {
+ boolean end = false;
+ static int count = 0;
+ int maxX;
+ int maxY;
+ boolean[][] a;
+ Node man;
+ Node[] target;
+ Node box;
+ Node box1;
+ Node box2;
+ Node box3;
+ Node[] wall;
+ Node[] b;
+ GamePanel panel;
+ // 当一个箱子推到目的时,list储存目的地节点.
+ ArrayList list = new ArrayList();
+ // 储存墙.
+ ArrayList wallList = new ArrayList();
+ public static int left = 4;
+ public static int up = 1;
+ public static int right = 2;
+ public static int down = 3;
+ public static int direction = 0;
+ // 在BOX的构造函数中，用布尔型的二维数组填充游戏画面,同时，定义玩家，箱子和目的地。
+ public Box(GamePanel p, int maxX, int maxY) {
+  panel = p;
+  this.maxX = maxX;
+  this.maxY = maxY;
+  a = new boolean[maxX][maxY];
+  for (int i = 0; i < maxX; i++) {
+   for (int j = 0; j < maxY; j++) {
+    a[i][j] = false;
+   }
+  }
+  // 定义箱子，玩家和目的地的初始位置
+  int x = 5;
+  int y = 8;
+  man = new Node(x, y);
+  a[x][y] = true;
+  // 定义游戏中的箱子的位置,并置为TRUE;
+  b = new Node[4];
+  box = new Node(10, 9);
+  a[10][9] = true;
+  b[0] = box;
+  box1 = new Node(6, 7);
+  a[6][7] = true;
+  b[1] = box1;
+  box2 = new Node(11, 8);
+  a[11][8] = true;
+  b[2] = box2;
+  box3 = new Node(8, 8);
+  a[8][8] = true;
+  b[3] = box3;
+  // 定义墙和目的地.
+  createWall();
+  target = new Node[4];
+  target[0] = new Node(7, 9);
+  target[1] = new Node(6, 9);
+  target[2] = new Node(7, 10);
+  target[3] = new Node(6, 10);
+ }
+ public void move(int d1, int d2) {
+  a[man.x][man.y] = false;
+  man.x += d1;
+  man.y += d2;
+  // 如果玩家遇到墙,则不能前进;否则,推动箱子.
+  if (a[man.x][man.y]) {
+   if (isOutofwall()) {
+    moveDisable(man, d1, d2);
+   } else {
+    for (int i = 0; i < b.length; i++) {
+     if (man.x == b[i].x && man.y == b[i].y) {
+      b[i].x += d1;
+      b[i].y += d2;
+      // 如果箱子全部推到位,则游戏结束
+      isArrive(b[i]);
+      // 利用一个IF判断箱子是否重叠,如果重叠,则不能前进;
+      if (a[b[i].x][b[i].y]) {
+       moveDisable(b[i], man, d1, d2);
+      } else {
+       // 一定要将箱子的位置置为true,不然箱子移动一次以后就不再移动.
+       a[b[i].x][b[i].y] = true;
+      }
+     }
+    }
+   }
+  }
+  panel.repaint();
+  if (end) {
+   JOptionPane.showMessageDialog(null, "恭喜过关");
+   System.exit(0);
+  }
+ }
+ // 生成游戏地图
+ public void createWall() {
+  for (int i = 5; i < 12; i++) {
+   Node walls = new Node(i, 5);
+   wallList.add(walls);
+  }
+  for (int i = 11; i < 14; i++) {
+   Node walls = new Node(i, 6);
+   wallList.add(walls);
+  }
+  wallList.add(new Node(13, 7));
+  wallList.add(new Node(13, 8));
+  wallList.add(new Node(13, 9));
+  wallList.add(new Node(12, 9));
+  wallList.add(new Node(12, 10));
+  for (int i = 12; i > 4; i--) {
+   Node walls = new Node(i, 11);
+   wallList.add(walls);
+  }
+  wallList.add(new Node(5, 10));
+  wallList.add(new Node(4, 10));
+  wallList.add(new Node(4, 9));
+  wallList.add(new Node(4, 8));
+  wallList.add(new Node(4, 8));
+  wallList.add(new Node(4, 7));
+  wallList.add(new Node(5, 7));
+  wallList.add(new Node(5, 6));
+  wallList.add(new Node(7, 7));
+  wallList.add(new Node(8, 7));
+  wallList.add(new Node(9, 7));
+  wallList.add(new Node(8, 9));
+  wallList.add(new Node(8, 10));
+  // 将墙壁的对象置为true
+  for (int i = 0; i < wallList.size(); i++) {
+   Node n = (Node) wallList.get(i);
+   a[n.x][n.y] = true;
+  }
+ }
+ // 当撞到墙时,玩家不能前进
+ public void moveDisable(Node n, int d1, int d2) {
+  switch (direction) {
+  case 4:
+   n.x -= d1;
+   break;
+  case 1:
+   n.y -= d2;
+   break;
+  case 2:
+   n.x -= d1;
+   break;
+  case 3:
+   n.y -= d2;
+   break;
+  }
+ }
+ // 用来使两个箱子不重叠
+ public void moveDisable(Node n1, Node n2, int d1, int d2) {
+  switch (direction) {
+  case 4:
+   n1.x -= d1;
+   n2.x -= d1;
+   break;
+  case 1:
+   n1.y -= d2;
+   n2.y -= d2;
+   break;
+  case 2:
+   n1.x -= d1;
+   n2.x -= d1;
+   break;
+  case 3:
+   n1.y -= d2;
+   n2.y -= d2;
+   break;
+  }
+ }
+ // 判断玩家是否越过边界
+ public boolean isOutofwall() {
+  for (int i = 0; i < wallList.size(); i++) {
+   Node n = (Node) wallList.get(i);
+   if (man.x == n.x && man.y == n.y) {
+    return true;
+   }
+  }
+  return false;
+ }
+ // 如果所有的箱子到位,则游戏结束
+ public void isArrive(Node n) {
+  for (int i = 0; i < target.length; i++) {
+   if (target[i].x == n.x && target[i].y == n.y) {
+    list.add(target[i]);
+   } else if (target[i].x == man.x && target[i].y == man.y) {
+    list.remove(target[i]);
+   }
+  }
+  if (list.size() == target.length) {
+   end = true;
+  }
+ }
+}

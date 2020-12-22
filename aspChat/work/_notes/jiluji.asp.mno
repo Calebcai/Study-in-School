@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_student" value="name:编号;datatype:INTEGER,name:S_ID;datatype:INTEGER,name:S_NAME;datatype:LONGCHAR,name:S_SEX;datatype:LONGCHAR,name:S_NATION;datatype:LONGCHAR,name:S_GRADE;datatype:INTEGER" />
+</info>

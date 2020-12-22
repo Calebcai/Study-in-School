@@ -1,0 +1,171 @@
+html,body{
+    margin: 0 auto;
+    padding: 0px;
+}
+*{
+    margin: 0 auto;
+    padding: 0px;
+}
+#wrap{
+    width: 100%;
+    margin: 0 auto;
+}
+#daohanglan
+{
+    width: 100%;
+    position: absolute;
+}
+#daohanglan-1
+{
+    padding: 15px;
+    width: 100%;
+    /* background-color: rgba(15, 15, 15, 0.815); */
+    background-image: url(./img/bg1.jpg);
+    height: 30px;
+    z-index: 1;
+}
+#daohanglan-1 a
+{
+    padding: 30px;
+    color: white;
+    text-decoration: none;
+}
+#daohanglan-1 a:hover
+{
+    font-weight: bold;
+    background-color: #fff;
+    color: black;
+    transform: scale(1.12);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.863);
+    
+}
+#daohanglan-1 li
+{
+    padding-left: 120px;
+    width: 10%;
+    list-style: none;
+    display: inline-block;
+}
+#video-cont
+{
+    background-color: rgb(58, 52, 52);
+}
+#video-cont
+{
+    float: left;
+    width: 100%;
+    padding: 25px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#v-left video
+{
+    padding-left: 30px;
+    float: left;
+    width: 60%;
+    
+}
+#v-left
+{
+    display: block;
+}
+#v-right
+{
+    overflow: scroll;
+    position: relative;
+    left: 120px;
+    width: 22%;
+    float: left;
+    height: 520px;
+    background-color: rgb(238, 223, 223);
+    display: block;
+}
+#v-play-1 video
+{
+    margin: 10px;
+    width: 95%;
+}
+#v-play-2 th
+{
+    width: 40%;
+}
+#v-play-2 a
+{
+    text-decoration: none;
+    color: black;
+}
+#v-play-2 a:hover
+{
+    color: white;
+}
+#bottom
+{
+    padding-top: 30px;
+    width: 100%;
+    margin-top: -50px;
+    clear: both;
+    padding-bottom: 250px;
+    background: url(./img/ly4.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#lyb
+{
+    margin-left: 30px;
+    text-align: center;
+    border: solid 4px black;
+    background: url(./img/ly2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#ly{
+    margin-left: 100px;
+}
+#tip
+{
+    padding-top: 100px;
+    display: block;
+}
+#tip button
+{
+    color: rgb(255, 255, 255);
+    background-color: skyblue;
+    width: 60px;
+    height: 50px;
+    border-radius: 15px;
+}
+#tip button:hover
+{
+    color: rgb(231, 75, 75);
+    font-size: large;
+}
+#wc
+{
+    text-align: center;
+    color: rgb(9, 178, 245);
+}
+.ds{
+    text-decoration: none;
+    position: absolute;
+    margin-top: 750px;
+   
+}
+#ds1{
+    text-decoration: none;
+    position: absolute;
+    margin-top: 750px;
+    margin-left: -60px;
+}
+.d{
+    padding-left: 45%;
+}
+#tijiao
+{
+    position: relative;
+    top: -5px;
+}
+#tijiao2
+{
+    width: 60px;
+    height: 30px;
+}
